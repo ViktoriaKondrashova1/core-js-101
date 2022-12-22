@@ -38,7 +38,6 @@ function findElement(arr, value) {
 function generateOdds(len) {
   const array = new Array(len);
   array.fill(1);
-  array.map(nvm, index) =>
 }
 
 
