@@ -588,6 +588,11 @@ function distinct(arr) {
  *   }
  */
 function group(/* array, keySelector, valueSelector */) {
+  // let map = new Map();
+  // array.map((elem) => {
+  //     map.set(elem.country, elem.city);
+  //     console.log(map);
+  // });
   throw new Error('Not implemented');
 }
 
@@ -604,8 +609,9 @@ function group(/* array, keySelector, valueSelector */) {
  *   [[1, 2], [3, 4], [5, 6]], (x) => x     =>   [ 1, 2, 3, 4, 5, 6 ]
  *   ['one','two','three'], (x) => x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
-function selectMany(/* arr, childrenSelector */) {
-  throw new Error('Not implemented');
+function selectMany(arr, childrenSelector) {
+  // eslint-disable-next-line max-len
+  return arr.reduce((accumulator, currentValue) => accumulator.concat(childrenSelector(currentValue)), []);
 }
 
 /**
